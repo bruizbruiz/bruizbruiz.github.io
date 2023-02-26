@@ -21,7 +21,7 @@ body {
 
 #header::before {
     content: '';
-    background-image: url(mountainSunset.jpg);
+    background-image: url(images/mountainSunset.jpg);
     background-size: cover;
     background-position: center;
     position: absolute;
