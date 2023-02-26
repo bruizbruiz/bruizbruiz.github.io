@@ -67,7 +67,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #7A26C1;
+    background: #b87ce9;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -91,7 +91,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span{
-    color: #7A26C1;
+    color: #b87ce9;
 }
 
 /* About Me Section */
@@ -156,7 +156,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #7A26C1;
+    background: #b87ce9;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -305,7 +305,7 @@ nav ul li a:hover::after {
 }
 
 .contact-left p i {
-    color: #7A26C1;
+    color: #b87ce9;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -324,7 +324,7 @@ nav ul li a:hover::after {
 }
 
 .social-icons a:hover {
-    color: #7A26C1;
+    color: #b87ce9;
     transform: translateY(-5px)
 }
 
