@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Ruiz - Porfolio Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19c5e3ca0e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="br--transparent-background.png" class="logo">
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1><span>B</span>rian <span>R</span>uiz</h1>
+                <p>Computer Science Student</p>
+            </div>
+        </div>
+    </div>
+    <!--About Me Section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="BrianRuiz.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="about-p">
+                        <p>Hello, my name is Brian Ruiz and I enjoy developing and designing web applications.
+                            I am currently a computer science student at Kean University. My current focus is 
+                            on devloping projects that will give me practical experience.
+
+                            
+                        </p>
+                    </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('resume')">Resume</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages:</span><br>Java, Python, PHP, mySQL, JavaScript</li>
+                            <li><span>Frameworks:</span><br>Flask</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="resume">
+                        <ul>
+                            <li><a href="Brian Ruiz Resume.pdf" target="_blank" class="btn">Resume <i class="fa-solid fa-file-arrow-down"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Projects-->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+           <div class="work">
+                <img src="work2.jpg">
+                <div class="layer">
+                    <h3>Bank Management System</h3>
+                    <p>This app was made with PHP, mySQL, and HTML. This was made for a class project to demonstrate 
+                        database management skills and knowledge. When entering the site, users are able to click the
+                        "Display Customers" table and sign in with any of the accounts. Then users are able to add, update, or
+                        view transactions.
+                    </p>
+                    <p><a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> 
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </p>
+                </div>
+           </div>
+           <div class="work">
+                <img src="work1.jpg">
+                <div class="layer">
+                    <h3>Encryption and Decryption Web App</h3>
+                    <p>This app was made with vanilla JavaScript, HTML, and CSS. This app was made to aid me in my cryptography 
+                        & cryptanalysis coursework. When entering the app the user is able to 
+                        select any of the ciphers listed on the website then the user should enter a cipher key or value 
+                        and can choose to decrypt or encrypt any text.
+                    </p>
+                    <p><a href="#"><i class="fa-solid fa-up-right-from-square"></i></a> 
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Contact Section-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>brianruiz02@outlook.com</p>
+                <p><i class="fa-solid fa-phone"></i>(862)754-9955</p>
+                <div class="social-icons">
+                    <a href="https://github.com/bruizbruiz" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/bruizbruiz/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form action="https://formsubmit.co/dc8b27204b242acf5f473884242c4ecb" method="POST">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+
+        var sideMenu = document.getElementById("sideMenu");
+        
+        function openMenu() {
+            sideMenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            sideMenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
